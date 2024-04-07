@@ -14,24 +14,6 @@ export default function Home() {
 					transportation of your parcel or deliver another user&apos;s package.
 				</p>
 			</div>
-
-			<div className='flex justify-center md:justify-end w-full'>
-				<a
-					className='pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0'
-					href='https://nextjs.org'
-					target='_blank'
-					rel='noopener noreferrer'
-				>
-					<Image
-						src='/next.svg'
-						alt='Nextjs Logo'
-						className='dark:invert'
-						width={100}
-						height={24}
-						priority
-					/>
-				</a>
-			</div>
 		</main>
 	);
 }
