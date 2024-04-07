@@ -11,7 +11,7 @@ export default function Home() {
 				</div>
 				<p className={'max-w-80 text-center text-muted-foreground'}>
 					Application that allows users to create a request for the
-					transportation of your parcel or deliver another user's package.
+					transportation of your parcel or deliver another user&apos;s package.
 				</p>
 			</div>
 
