@@ -1,0 +1,15 @@
+.navigation {
+	@apply grid items-start px-2 font-medium lg:px-4 sm:text-sm;
+}
+
+.navItem {
+	@apply flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary;
+
+	&.isActive {
+		@apply bg-muted text-primary;
+	}
+
+	& svg {
+		@apply h-4 w-4;
+	}
+}

@@ -1,0 +1,15 @@
+.header {
+	@apply flex h-14 items-center justify-between gap-4 border-b bg-muted/40 px-4 lg:h-[60px] lg:px-6;
+}
+
+.sheetTrigger {
+	@apply shrink-0 md:hidden;
+}
+
+.sheetContent {
+	@apply flex flex-col;
+}
+
+.sheetLogo {
+	@apply flex items-center ms-auto me-auto gap-2 text-lg font-semibold;
+}

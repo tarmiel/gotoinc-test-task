@@ -1,0 +1,15 @@
+.sidebar {
+	@apply hidden border-r bg-muted/40 md:block;
+
+	& .container {
+		@apply flex h-full max-h-screen flex-col gap-2;
+	}
+
+	& .logoWrapper {
+		@apply flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6;
+
+		& .logo {
+			@apply flex items-center gap-2 font-semibold;
+		}
+	}
+}
