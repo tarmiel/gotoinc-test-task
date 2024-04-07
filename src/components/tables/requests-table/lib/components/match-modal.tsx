@@ -17,8 +17,8 @@ export function MatchModal({ request }: MatchModalProps) {
 				if (
 					req.userId !== request.id &&
 					req.requestType !== request.requestType &&
-					req.from === request.from &&
-					req.to === request.to &&
+					req.from.toLowerCase() === request.from.toLowerCase() &&
+					req.to.toLowerCase() === request.to.toLowerCase() &&
 					req.dispatchDate === request.dispatchDate
 				) {
 					return true;
