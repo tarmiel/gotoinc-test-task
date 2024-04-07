@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GotoInc test task
+
+Application that allows users to create a request for the transportation of your parcel or deliver another user's package.
+
+**Deployed on** - [https://gotoinc-test-task.vercel.app/](https://gotoinc-test-task.vercel.app/)
 
 ## Getting Started
 
@@ -16,21 +20,36 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## App structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Main pages:
 
-## Learn More
+- /\<id>/create - select request type (order or deliver)
+- /\<id>/create/order - create order request
+- /\<id>/create/deliver - create delivery request
+- /\<id>/requests - list of all user requests
+- /\<id> - redirect to /\<id>/requests
+- /requests - list of all requests
 
-To learn more about Next.js, take a look at the following resources:
+\<id> - defines the user. According to this parameter, the created request will be added to a
+certain user.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The list of user requests reflect all user-created requests through table. The user is able to:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- edit the request using the dialog window
+- delete the request
+- show matched requests
 
-## Deploy on Vercel
+Matches are
+displayed according to the following principle: the same city from which the parcel is delivered,
+the same city where the parcel is delivered, same dispatch date
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The list of all requests page have all requests of all users. User is able to sort all requests by the date of dispatch, by default sort by the date of creation of requests
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Tech stack
+
+1. Next.js
+2. SCSS
+3. Shadcn/ui + Tailwindcss
+4. Redux toolkit
+5. Localstorage
